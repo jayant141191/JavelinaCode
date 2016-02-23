@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="utf-8">
+    <script language="javascript" type="text/javascript">
+    function importcode(destinationField,codeToImport) {
+	
+         if(document.selection){
+            destinationField.focus();
+            var userSelection=document.selection.createRange();
+            userSelection.text=codeToImport;
+         }
+	    else if(destinationField.selectionStart || destinationField.selectionStart == '0') {
+	
+	         var startPosition=destinationField.selectionStart;
+	         var endPosition=destinationField.selectionEnd;
+	         destinationField.value=destinationField.value.substring(0,startPosition) + codeToImport + destinationField.value.substring(endPosition,destinationField.value.length);
+         }  	  
+        else
+         {
+            destinationField.value+=codeToImport; 
+         }
+	
+    }
+    </script>
+	<title>JAVA DEMO</title>
+    <link rel="stylesheet" href="layoutcss.css">
+</head>
+
+<body>
+
+      <div id="wrapper">
+	       <div id="header">Header</div>
+	       <div id="content">
+		   
+		         <div id="content-left">
+				     <form name="outputform">
+                        <textarea rows="15" cols="50" name="outputtext" autofocus></textarea>
+					 </form>
+				 </div>
+				 
+		         <div id="content-main">
+				    <ul>
+					   <!-----------ARRAYS SECTION------------------->
+					   <h1><b>Arrays</b></h1>
+					   <li>
+					        <a href="#">Declaring and creating array</a>
+					   
+					   
+					   
+					   </li>
+					   <br>
+					   
+					   <li>
+					        <a href="#">Processing array</a>
+					   
+					   
+					   
+					   </li>
+					   <br>
+					   
+					   <li>
+					        <a href="#">Passing arrays to methods</a>
+					   
+					   
+					   
+					   </li>
+					   <br>
+					   
+					   <li>
+					        <a href="#">Returning an array from method</a>
+					   
+					   
+					   
+					   </li>
+					   <br>
+					   
+					    <li>
+					        <a href="#">Copying arrays</a>
+					   
+					   
+					   
+					   </li>
+					   <br>
+					   <!-------------------ARRAYS SECTION End----------------->
+					   
+					   <!-------------------ABSTRACTION SECTION------------------->
+					   <h1><b>Abstraction</b></h1>
+	                   <li>
+					        <a href="#">Abstract class</a>
+					   
+					   
+					   
+					   </li>
+					   <br>
+
+                       <li>
+					        <a href="#">Inheriting the abstract class</a>
+					   
+					   
+					   
+					   </li>					   
+					   <br>
+					   
+					    <li>
+					        <a href="#">Abstract methods</a>
+					   
+					   
+					   
+					   </li>
+					   <br>
+					   <!-------------------ABSTRACTION SECTION End----------------->
+					   
+					   <!-------------------CLASS SECTION------------------->
+					   <h1><b>Classes and Objects</b></h1>
+	                   <li>
+					        <a href="#">Class declaration</a>
+					   
+					   
+					   
+					   </li>
+					   <br>
+
+                       <li>
+					        <a href="#">Constructors</a>
+					   
+					   
+					   
+					   </li>					   
+					   <br>
+					   
+					    <li>
+					        <a href="#">Creating an object</a>
+					   
+					   
+					   
+					   </li>
+					   <br>
+					   
+					   <li>
+					       <a href="#">Accessing instance variables and methods</a>
+					   
+					   
+					   
+					   </li>
+					   <br>
+					   <!-------------------CLASS SECTION End----------------->
+					   
+					    <!------------------DECISION CONTROL SECTION-------------> 
+					   <h1><b>Decision Control<b></h1>
+					   <li>
+					       <a href="#">if-else</a>
+					   
+					   
+					   </li>
+					   <br>
+					   <!------------------DECISION CONTROL SECTION End-------------->
+					   
+					   <!-------------------LOOPS SECTION-------------->
+					   <h1><b>Loops</b></h2>
+					  <!---------for-loop-------------->
+					   <li>
+					        <a href="#">for loop</a>
+						    <ul class="dropdown">
+                               <li><a href="#">
+                                    <form name="inputform_for">
+		                                <textarea rows="8" cols="50" name="inputtext" readonly>
+for(initialization; Boolean_expression; update)
+{
+    statements(s)
+}						   
+	                                    </textarea>
+									 </form>
+                                    </a>
+									<button type="button" style="margin-left:auto;margin-right:auto;display:block" onClick="importcode(document.outputform.outputtext,document.inputform_for.inputtext.value);">Import Code</button>   
+                                  </li>
+                               </ul>								                    	
+						</li>
+						<br>
+						<!---------while loop--------------->
+					   <li>
+					        <a href="#">while loop</a>
+							 <ul class="dropdown">
+                               <li><a href="#">
+                                    <form name="inputform_while">
+		                                <textarea rows="8" cols="40" name="inputtext" readonly>
+while(expression) 
+{
+     statement(s)
+}									 
+                                        </textarea>
+									 </form>	
+                                    </a>
+									<button type="button" style="margin-left:auto;margin-right:auto;display:block" onClick="importcode(document.outputform.outputtext,document.inputform_while.inputtext.value);">Import Code</button>   
+                                  </li>
+                              </ul>	   
+					   </li>
+					   <br>
+					   
+					   <!------------do-while loop----------------->
+					   <li>
+					        <a href="#">do-while loop</a>
+							 <ul class="dropdown">
+                               <li><a href="#">
+                                    <form name="inputform_dowhile">
+		                                <textarea rows="8" cols="40" name="inputtext" readonly>
+do
+{
+   statement(s)
+}while(expression);								 
+										</textarea>
+									 </form>	
+                                    </a>
+									<button type="button" style="margin-left:auto;margin-right:auto;display:block" onClick="importcode(document.outputform.outputtext,document.inputform_dowhile.inputtext.value);">Import Code</button>   
+                                  </li>
+                              </ul>	   
+					   </li>
+					   <br>
+					   
+					  <!------------------LOOPS SECTION End-------------------->
+					   
+					 
+					   
+					  
+					</ul>  				 
+				 </div>
+		        
+	       </div>
+	       <div id="footer"></div>
+	       <div id="bottom"></div>
+      </div>
+</body>
+</html>
